@@ -1,0 +1,60 @@
+/* src/components/Modal/Modal.css */
+.characterName {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .closeButton {
+    background-color: #ff007f !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-transform: none;
+    transition: background-color 0.3s;
+  }
+  
+  .closeButton:hover {
+    background-color: #d10069 !important;
+  }
+  
+  .dialogPaper {
+    border-radius: 20px !important;
+    padding: 16px;
+    max-width: 600px;
+    min-height: 400px;
+    max-height: 600px;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+  
+  .dialogContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+  }
+  
+  .centeredContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .centeredText {
+    text-align: center;
+  }
+  
+  .cardImage {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
