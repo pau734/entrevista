@@ -11,6 +11,26 @@ const useStyles = makeStyles(() => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
   },
+  cardImage: {
+    width: '100%',
+    maxWidth: '120px',
+    height: 'auto',
+    display: 'block',
+    margin: '0 auto',
+  },
+  dialogPaper: {
+    borderRadius: '60px',
+    padding: '16px',
+  },
+  centeredContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  centeredText: {
+    textAlign: 'center',
+  },
 }));
 
 export default useStyles;
