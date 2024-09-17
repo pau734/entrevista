@@ -18,6 +18,16 @@ const useStyles = makeStyles(() => ({
     display: 'block',
     margin: '0 auto',
   },
+  cardContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '100%',
+    textAlign: 'center',
+    padding: '16px',
+    boxSizing: 'border-box',
+  },
   dialogPaper: {
     borderRadius: '60px',
     padding: '16px',

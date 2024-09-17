@@ -1,6 +1,6 @@
 // src/components/Card.tsx
 import React from 'react';
-import useStyles from './styles'; // Importar useStyles desde styles.ts
+import useStyles from '../styles';
 
 interface CardProps {
   character: {
@@ -19,22 +19,21 @@ interface CardProps {
 }
 
 function Card({ character, onClick }: CardProps): React.JSX.Element {
-  const classes = useStyles(); // Usar useStyles para obtener las clases
+  const classes = useStyles();
 
   return (
     <div
       role="button"
       tabIndex={0}
       onClick={onClick}
-      onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }} // Manejador de teclado para accesibilidad
+      onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }}
+      className={classes.cardContainer}
     >
-      {/* Aplicar la clase 'cardImage' a la imagen */}
       <img
         src={character.images.main}
         alt={`${character.name.first} ${character.name.last}`}
-        className={classes.cardImage} // Aplicar la clase cardImage aquí
+        className={classes.cardImage}
       />
-      {/* Concatenamos las propiedades del nombre */}
       <h3>{`${character.name.first} ${character.name.middle} ${character.name.last}`}</h3>
     </div>
   );

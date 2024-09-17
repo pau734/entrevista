@@ -2,13 +2,12 @@
 import React from 'react';
 import {
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
   Button,
   Box,
 } from '@mui/material';
-import useStyles from './styles'; // Importar estilos personalizados
+import './Modal.css';
 
 interface ModalProps {
   character: {
@@ -32,29 +31,27 @@ interface ModalProps {
 }
 
 function Modal({ character, onClose }: ModalProps): React.JSX.Element {
-  const classes = useStyles();
-
   return (
     <Dialog
       open
       onClose={onClose}
       maxWidth="md"
       fullWidth
-      classes={{ paper: classes.dialogPaper }}
+      classes={{ paper: 'dialogPaper' }}
     >
-      <DialogTitle>
+      <Box className="characterName">
         {`${character.name.first} ${character.name.middle} ${character.name.last}`}
-      </DialogTitle>
+      </Box>
 
       <DialogContent>
-        <Box className={classes.centeredContainer}>
+        <Box className="centeredContainer">
           <img
             src={character.images.main}
             alt={`${character.name.first} ${character.name.last}`}
-            className={classes.cardImage}
+            className="cardImage"
           />
           <p>{character.description}</p>
-          <Box className={classes.centeredText}>
+          <Box className="centeredText">
             <p>
               <strong>Species:</strong>
               <br />
@@ -80,7 +77,7 @@ function Modal({ character, onClose }: ModalProps): React.JSX.Element {
       </DialogContent>
 
       <DialogActions>
-        <Button onClick={onClose} color="primary" variant="contained">
+        <Button onClick={onClose} className="closeButton">
           Close
         </Button>
       </DialogActions>
